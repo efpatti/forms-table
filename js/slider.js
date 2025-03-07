@@ -7,9 +7,11 @@ const indicators = document.querySelectorAll(".indicator");
 function updateIndicator() {
  indicators.forEach((indicator, index) => {
   if (index + 1 === counter) {
-   indicator.classList.add("active");
+   indicator.classList.add("bg-slate-200");
+   indicator.classList.remove("bg-gray-400");
   } else {
-   indicator.classList.remove("active");
+   indicator.classList.add("bg-gray-400");
+   indicator.classList.remove("bg-slate-200");
   }
  });
 }
@@ -37,6 +39,18 @@ buttons.forEach((button) => {
   });
 
   // Atualiza os indicadores
+  updateIndicator();
+ });
+});
+
+// Adiciona evento de clique nas bolinhas para trocar de slide
+indicators.forEach((indicator, index) => {
+ indicator.addEventListener("click", () => {
+  counter = index + 1;
+  slidesContainer.scrollTo({
+   left: index * slides[0].offsetWidth,
+   behavior: "smooth",
+  });
   updateIndicator();
  });
 });
