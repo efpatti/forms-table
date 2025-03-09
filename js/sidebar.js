@@ -3,6 +3,9 @@ const sidebarItems = [
  { id: 1, icon: "fa-book", text: "Colégio" },
  { id: 2, icon: "fa-newspaper", text: "Notícias" },
  { id: 3, icon: "fa-pen-ruler", text: "Cursos" },
+ { id: 3, icon: "fa-signature", text: "Inscrições" },
+ { id: 3, icon: "fa-headset", text: "Contato" },
+ { id: 3, icon: "fa-bars", text: "Menu" },
 ];
 
 // Função para renderizar a lista de itens na sidebar
@@ -16,7 +19,7 @@ function renderSidebar() {
             <li>
               <a href="#" class="flex flex-col items-center p-3 rounded-lg hover:bg-gray-200 transition duration-200">
                 <i class="fa-solid ${item.icon} text-lg"></i>
-                <span class="text-sm">${item.text}</span>
+                <span class="text-sm text-wrap">${item.text}</span>
               </a>
             </li>
           `;
