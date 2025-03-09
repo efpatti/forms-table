@@ -29,32 +29,47 @@
 
    <!-- Main Content -->
    <main class="flex-1 ml-[110px]">
-    <div class="w-full relative h-[80vh] overflow-hidden">
-     <div
-      class="w-full h-full flex snap-x overflow-x-scroll slider-parent"
-      id="slider"
+    <div class="flex flex-col h-full w-full">
+     <nav
+      class="flex w-full items-center h-[60px] bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 relative"
      >
+      <div class="flex items-center justify-center w-full">
+       <h1 class="font-semibold">
+        Universidade Municipal de São Caetano do Sul
+       </h1>
+      </div>
+      <div class="absolute right-[80px] h-full flex space-x-2">
+       <button class="bg-orange-400/75 rounded-2xl">Webmail</button>
+       <button class="bg-orange-400/75 rounded-2xl">USCS Online</button>
+      </div>
+     </nav>
+     <div class="w-full relative h-[80vh] overflow-hidden">
       <div
-       class="slide w-full h-full flex-shrink-0 bg-[url(./img/banner-1.jpg)] bg-cover bg-no-repeat"
-      ></div>
+       class="w-full h-full flex snap-x overflow-x-scroll slider-parent"
+       id="slider"
+      >
+       <div
+        class="slide w-full h-full flex-shrink-0 bg-[url(./img/banner-1.jpg)] bg-cover bg-no-repeat"
+       ></div>
+       <div
+        class="slide w-full h-full flex-shrink-0 bg-[url(./img/banner-2.jpg)] bg-cover bg-no-repeat"
+       ></div>
+       <div
+        class="slide w-full h-full flex-shrink-0 bg-[url(./img/banner-3.png)] bg-cover bg-no-repeat"
+       ></div>
+       <div
+        class="slide w-full h-full flex-shrink-0 bg-[url(./img/banner-4.png)] bg-cover bg-no-repeat"
+       ></div>
+      </div>
+      <!-- Indicadores -->
       <div
-       class="slide w-full h-full flex-shrink-0 bg-[url(./img/banner-2.jpg)] bg-cover bg-no-repeat"
-      ></div>
-      <div
-       class="slide w-full h-full flex-shrink-0 bg-[url(./img/banner-3.png)] bg-cover bg-no-repeat"
-      ></div>
-      <div
-       class="slide w-full h-full flex-shrink-0 bg-[url(./img/banner-4.png)] bg-cover bg-no-repeat"
-      ></div>
-     </div>
-     <!-- Indicadores -->
-     <div
-      class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2"
-     >
-      <button class="indicator w-3 h-3 bg-gray-400 rounded-full"></button>
-      <button class="indicator w-3 h-3 bg-gray-400 rounded-full"></button>
-      <button class="indicator w-3 h-3 bg-gray-400 rounded-full"></button>
-      <button class="indicator w-3 h-3 bg-gray-400 rounded-full"></button>
+       class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2"
+      >
+       <button class="indicator w-3 h-3 bg-gray-400 rounded-full"></button>
+       <button class="indicator w-3 h-3 bg-gray-400 rounded-full"></button>
+       <button class="indicator w-3 h-3 bg-gray-400 rounded-full"></button>
+       <button class="indicator w-3 h-3 bg-gray-400 rounded-full"></button>
+      </div>
      </div>
     </div>
    </main>
