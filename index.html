@@ -20,8 +20,16 @@
    <aside
     class="w-[110px] h-screen fixed left-0 top-0 bg-slate-100 text-slate-950 overflow-y-auto shadow-lg"
    >
-    <div class="flex h-full justify-center items-start p-4">
-     <ul id="sidebar-list" class="grid gap-4 font-medium">
+    <div class="flex h-full justify-center items-start">
+     <ul
+      id="sidebar-list"
+      class="grid gap-4 font-medium text-sky-600/75 opacity-80 w-full"
+     >
+      <li
+       class="flex flex-col items-center justify-center border-b-[1.5px] border-slate-200"
+      >
+       <img src="./img/Logo_uscs.png" class="h-3/4" />
+      </li>
       <!-- Itens serão gerados dinamicamente aqui -->
      </ul>
     </div>
@@ -40,16 +48,16 @@
       </div>
       <div class="absolute right-[80px] h-full flex space-x-2">
        <button
-        class="hover:bg-orange-600 duration-[200ms] ease-in bg-orange-500/75 rounded-2xl flex h-full space-x-2 justify-center items-center p-2"
+        class="hover:bg-orange-600 duration-[200ms] ease-in bg-orange-500/75 rounded-2xl flex h-[50px] space-x-2 justify-center items-center p-2"
        >
         <i class="fa-regular fa-envelope text-lg"></i>
         <span class="text-lg"> Webmail </span>
        </button>
        <button
-        class="hover:bg-orange-600 duration-[200ms] ease-in bg-orange-500/75 rounded-2xl flex h-full space-x-2 justify-center items-center p-2"
+        class="hover:bg-orange-600 duration-[200ms] ease-in bg-orange-500/75 rounded-2xl flex h-[50px] space-x-2 justify-center items-center p-2"
        >
-        <i class="fa-regular fa-circle-user text-lg bg-purple-500 h-[50px]"></i>
-        <span class="text-lg h-[50px]"> USCS Online </span>
+        <i class="fa-regular fa-circle-user text-lg"></i>
+        <span class="text-lg"> USCS Online </span>
        </button>
       </div>
      </nav>
@@ -59,8 +67,12 @@
        id="slider"
       >
        <div
-        class="slide w-full h-full flex-shrink-0 bg-[url(./img/banner-1.jpg)] bg-cover bg-no-repeat"
-       ></div>
+        class="slide w-full h-full flex-shrink-0 bg-[url(./img/banner-1.jpg)] bg-cover bg-no-repeat justify-end items-center"
+       >
+        <div class="flex z-10">
+         <h1>teste</h1>
+        </div>
+       </div>
        <div
         class="slide w-full h-full flex-shrink-0 bg-[url(./img/banner-2.jpg)] bg-cover bg-no-repeat"
        ></div>

@@ -8,23 +8,28 @@ const sidebarItems = [
  { id: 3, icon: "fa-bars", text: "Menu" },
 ];
 
-// Função para renderizar a lista de itens na sidebar
 function renderSidebar() {
  const ulElement = document.getElementById("sidebar-list");
 
- // Usando map para criar os <li> e renderizar na tela
- ulElement.innerHTML = sidebarItems
+ // Seleciona apenas os itens da sidebar (não a logo)
+ const existingLogo = ulElement.querySelector("li:first-child").outerHTML;
+
+ // Cria os novos itens sem sobrescrever a logo
+ const newItems = sidebarItems
   .map((item) => {
    return `
-            <li>
-              <a href="#" class="flex flex-col items-center p-3 rounded-lg hover:bg-gray-200 transition duration-200">
-                <i class="fa-solid ${item.icon} text-lg"></i>
-                <span class="text-sm text-wrap">${item.text}</span>
-              </a>
-            </li>
-          `;
+        <li class="border-b-[1.5px] border-slate-200">
+          <a href="#" class="flex flex-col items-center p-3 rounded-lg hover:bg-gray-200 transition duration-200 space-y-2">
+            <i class="fa-solid ${item.icon} text-4xl"></i>
+            <span class="text-xs font-semibold text-wrap">${item.text}</span>
+          </a>
+        </li>
+      `;
   })
   .join("");
+
+ // Atualiza a lista mantendo a logo
+ ulElement.innerHTML = existingLogo + newItems;
 }
 
 // Chama a função para renderizar a lista ao carregar a página
