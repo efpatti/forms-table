@@ -65,7 +65,7 @@
          </button>
         </div>
        </nav>
-     <div class="w-full h-[80vh] h-full flex flex-col text-slate-900">
+     <div class="w-full h-[80vh] h-full w-full flex flex-col text-slate-900">
 
 
         <div id="default-carousel" class="relative w-full" data-carousel="static">
@@ -115,9 +115,63 @@
         </div>
         
 
-        <div class="flex w-full h-[30vh] justify-center items center">
-    <h1>Faca sua inscricao</h1>
-    </div>
+        <div class="bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 py-16 text-white text-center flex w-full justify-center items-center" >
+            <div class="flex flex-col py-10 w-20 justify-center items-center w-3/4">
+                <h1 class="text-4xl font-bold mb-4">Transforme o Seu Futuro! Inscreva-se Agora</h1>
+                <p class="text-lg mb-8">A Universidade Municipal de São Caetano do Sul oferece uma educação de excelência, com professores renomados e uma infraestrutura de ponta. Não perca a chance de ser parte dessa história. Inscreva-se hoje e venha construir o seu amanhã!</p>
+                
+                <div class="flex justify-center space-x-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-gray-900 w-full max-w-sm">
+                        <h2 class="text-xl font-semibold text-center mb-4">Vantagens da Inscrição</h2>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Educação de qualidade com ênfase em inovação</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Acesso a estágios e parcerias com grandes empresas</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fas fa-check-circle text-green-500"></i>
+                                <span>Desenvolvimento pessoal e profissional contínuo</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm">
+                        <h2 class="text-xl font-semibold text-center mb-4 text-slate-900">Preencha Seu Formulário</h2>
+                        <form action="#" method="POST" class="space-y-4">
+                            <div class="flex flex-col">
+                                <label for="name" class="text-sm font-medium text-gray-900">Nome Completo</label>
+                                <input type="text" id="name" name="name" required class="mt-2 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            </div>
+                            
+                            <div class="flex flex-col">
+                                <label for="email" class="text-sm font-medium text-gray-900">E-mail</label>
+                                <input type="email" id="email" name="email" required class="mt-2 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+                            </div>
+                            
+                            <div class="flex flex-col">
+                                <label for="course" class="text-sm font-medium text-gray-900">Curso de Interesse</label>
+                                <select id="course" name="course" required class="mt-2 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                    <option value="" disabled selected>Selecione o curso</option>
+                                    <option value="ciência-da-computacao">Ciência da Computação</option>
+                                    <option value="engenharia">Engenharia</option>
+                                    <option value="arquitetura">Arquitetura</option>
+                                </select>
+                            </div>
+            
+                            <button type="submit" class="w-full py-3 bg-orange-500 text-white rounded-md hover:bg-orange-600 focus:outline-none">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <p class="text-sm mt-6">Ao se inscrever, você concorda com os <a href="#" class="text-blue-500 font-semibold">termos e condições</a> da universidade.</p>
+            </div>
+     
+        </div>
+        
 
      </div>
    </main>
