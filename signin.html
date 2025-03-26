@@ -3,8 +3,148 @@
  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <title>Slider Interativo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+   src="https://kit.fontawesome.com/bd48c4f017.js"
+   crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="./css/index.css" />
+  <script src="./js/sidebar.js" defer></script>
+  <script src="./js/slider.js" defer></script>
  </head>
- <body></body>
+ <body class="bg-gray-900 text-white font-sans w-full h-screen">
+  <div class="flex w-full">
+   <!-- Sidebar -->
+   <aside
+    class="w-[110px] h-screen fixed left-0 top-0 bg-slate-100 text-slate-950 overflow-y-auto shadow-lg"
+   >
+    <div class="flex h-full justify-center items-start">
+     <ul
+      id="sidebar-list"
+      class="grid gap-4 font-medium text-sky-600/75 opacity-80 w-full"
+     >
+      <li
+       class="flex flex-col items-center justify-center border-b-[1.5px] border-slate-200"
+      >
+       <img src="./img/Logo_uscs.png" class="h-3/4" />
+      </li>
+      <!-- Itens serão gerados dinamicamente aqui -->
+     </ul>
+    </div>
+   </aside>
+
+   <!-- Main Content -->
+   <main class="flex-1 ml-[110px]">
+    <div class="flex flex-col h-full w-full">
+     <nav
+      class="flex w-full items-center justify-center h-[7vh] bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 relative"
+     >
+      <div class="flex items-center justify-center w-full">
+       <h1 class="font-semibold">
+        Universidade Municipal de São Caetano do Sul
+       </h1>
+      </div>
+      <div class="absolute right-[20px] h-full flex p-2">
+       <button
+        class="hover:bg-orange-600 duration-[200ms] ease-in bg-orange-500/75 rounded-2xl flex space-x-2 justify-center items-center p-2"
+       >
+        <a href="./signin.html">
+         <i class="fa-regular fa-circle-user text-lg"></i>
+         <span class="text-lg"> Entrar </span>
+        </a>
+       </button>
+      </div>
+     </nav>
+     <div
+      class="w-full relative h-[93vh] flex justify-center items-center bg-[url(./img/faculdade.jpg)] bg-no-repeat bg-cover"
+     >
+      <div
+       class="flex w-full h-full justify-center items-center backdrop-blur-sm backdrop-brightness-[65%] bg-blue-500/15"
+      >
+       <div
+        class="flex w-2/5 justify-center items-center bg-slate-100/90 text-slate-900 h-2/3 flex-col justify-center px-6 py-12 lg:px-8 rounded-lg"
+       >
+        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+         <img
+          class="mx-auto h-20 w-auto"
+          src="./img/Logo_uscs.png"
+          alt="Your Company"
+         />
+         <h2
+          class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900"
+         >
+          Entrar
+         </h2>
+        </div>
+
+        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+         <form class="space-y-6" action="#" method="POST">
+          <div>
+           <label for="email" class="block text-sm/6 font-medium text-gray-900"
+            >Email</label
+           >
+           <div class="mt-2">
+            <input
+             type="email"
+             name="email"
+             id="email"
+             autocomplete="email"
+             required
+             class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
+            />
+           </div>
+          </div>
+
+          <div>
+           <div class="flex items-center justify-between">
+            <label
+             for="password"
+             class="block text-sm/6 font-medium text-gray-900"
+             >Senha</label
+            >
+            <div class="text-sm">
+             <a href="#" class="font-semibold text-blue-600 hover:text-blue-500"
+              >Esqueceu sua senha?</a
+             >
+            </div>
+           </div>
+           <div class="mt-2">
+            <input
+             type="password"
+             name="password"
+             id="password"
+             autocomplete="current-password"
+             required
+             class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
+            />
+           </div>
+          </div>
+
+          <div>
+           <button
+            type="submit"
+            class="flex w-full justify-center rounded-md bg-blue-500 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-blue-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+           >
+            Entrar
+           </button>
+          </div>
+         </form>
+
+         <p class="mt-10 text-center text-sm/6 text-gray-500">
+          Não tem uma conta?
+          <a
+           href="./signup.html"
+           class="font-semibold text-blue-600 hover:text-blue-500"
+           >Cadastre-se</a
+          >
+         </p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </main>
+  </div>
+ </body>
 </html>
